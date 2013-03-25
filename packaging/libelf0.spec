@@ -46,11 +46,11 @@ rm -f %{buildroot}%{_libdir}/*.la
 
 %files
 %defattr(-,root,root)
+%license COPYING.LIB 
 %{_libdir}/libelf.so.*
 
 %files devel
 %defattr(-,root,root)
-%doc README ChangeLog COPYING.LIB VERSION
 %{_libdir}/libelf.so
 %{_libdir}/libelf.a
 %{_libdir}/pkgconfig/libelf.pc
