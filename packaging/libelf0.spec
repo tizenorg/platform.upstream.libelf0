@@ -7,6 +7,7 @@ Url:            http://www.mr511.de/software/
 Group:          System/Libraries
 Source:         libelf-%{version}.tar.bz2
 Source2:        baselibs.conf
+Source1001: 	libelf0.manifest
 BuildRequires:  pkgconfig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
@@ -28,6 +29,7 @@ to develop applications that require these.
 
 %prep
 %setup -q -n libelf-%{version}
+cp %{SOURCE1001} .
 
 %build
 %configure --disable-nls
@@ -45,11 +47,13 @@ rm -f %{buildroot}%{_libdir}/*.la
 %postun -p /sbin/ldconfig
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING.LIB 
 %{_libdir}/libelf.so.*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_libdir}/libelf.so
 %{_libdir}/libelf.a
