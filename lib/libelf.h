@@ -169,60 +169,60 @@ typedef struct {
 /*
  * Function declarations
  */
-extern Elf *elf_begin __P((int __fd, Elf_Cmd __cmd, Elf *__ref));
-extern Elf *elf_memory __P((char *__image, size_t __size));
-extern int elf_cntl __P((Elf *__elf, Elf_Cmd __cmd));
-extern int elf_end __P((Elf *__elf));
-extern const char *elf_errmsg __P((int __err));
-extern int elf_errno __P((void));
-extern void elf_fill __P((int __fill));
-extern unsigned elf_flagdata __P((Elf_Data *__data, Elf_Cmd __cmd,
+__attribute__ ((visibility ("default"))) extern Elf *elf_begin __P((int __fd, Elf_Cmd __cmd, Elf *__ref));
+__attribute__ ((visibility ("default"))) extern Elf *elf_memory __P((char *__image, size_t __size));
+__attribute__ ((visibility ("default"))) extern int elf_cntl __P((Elf *__elf, Elf_Cmd __cmd));
+__attribute__ ((visibility ("default"))) extern int elf_end __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern const char *elf_errmsg __P((int __err));
+__attribute__ ((visibility ("default"))) extern int elf_errno __P((void));
+__attribute__ ((visibility ("default"))) extern void elf_fill __P((int __fill));
+__attribute__ ((visibility ("default"))) extern unsigned elf_flagdata __P((Elf_Data *__data, Elf_Cmd __cmd,
 	unsigned __flags));
-extern unsigned elf_flagehdr __P((Elf *__elf, Elf_Cmd __cmd,
+__attribute__ ((visibility ("default"))) extern unsigned elf_flagehdr __P((Elf *__elf, Elf_Cmd __cmd,
 	unsigned __flags));
-extern unsigned elf_flagelf __P((Elf *__elf, Elf_Cmd __cmd,
+__attribute__ ((visibility ("default"))) extern unsigned elf_flagelf __P((Elf *__elf, Elf_Cmd __cmd,
 	unsigned __flags));
-extern unsigned elf_flagphdr __P((Elf *__elf, Elf_Cmd __cmd,
+__attribute__ ((visibility ("default"))) extern unsigned elf_flagphdr __P((Elf *__elf, Elf_Cmd __cmd,
 	unsigned __flags));
-extern unsigned elf_flagscn __P((Elf_Scn *__scn, Elf_Cmd __cmd,
+__attribute__ ((visibility ("default"))) extern unsigned elf_flagscn __P((Elf_Scn *__scn, Elf_Cmd __cmd,
 	unsigned __flags));
-extern unsigned elf_flagshdr __P((Elf_Scn *__scn, Elf_Cmd __cmd,
+__attribute__ ((visibility ("default"))) extern unsigned elf_flagshdr __P((Elf_Scn *__scn, Elf_Cmd __cmd,
 	unsigned __flags));
-extern size_t elf32_fsize __P((Elf_Type __type, size_t __count,
+__attribute__ ((visibility ("default"))) extern size_t elf32_fsize __P((Elf_Type __type, size_t __count,
 	unsigned __ver));
-extern Elf_Arhdr *elf_getarhdr __P((Elf *__elf));
-extern Elf_Arsym *elf_getarsym __P((Elf *__elf, size_t *__ptr));
-extern off_t elf_getbase __P((Elf *__elf));
-extern Elf_Data *elf_getdata __P((Elf_Scn *__scn, Elf_Data *__data));
-extern Elf32_Ehdr *elf32_getehdr __P((Elf *__elf));
-extern char *elf_getident __P((Elf *__elf, size_t *__ptr));
-extern Elf32_Phdr *elf32_getphdr __P((Elf *__elf));
-extern Elf_Scn *elf_getscn __P((Elf *__elf, size_t __index));
-extern Elf32_Shdr *elf32_getshdr __P((Elf_Scn *__scn));
-extern unsigned long elf_hash __P((const unsigned char *__name));
-extern Elf_Kind elf_kind __P((Elf *__elf));
-extern size_t elf_ndxscn __P((Elf_Scn *__scn));
-extern Elf_Data *elf_newdata __P((Elf_Scn *__scn));
-extern Elf32_Ehdr *elf32_newehdr __P((Elf *__elf));
-extern Elf32_Phdr *elf32_newphdr __P((Elf *__elf, size_t __count));
-extern Elf_Scn *elf_newscn __P((Elf *__elf));
-extern Elf_Cmd elf_next __P((Elf *__elf));
-extern Elf_Scn *elf_nextscn __P((Elf *__elf, Elf_Scn *__scn));
-extern size_t elf_rand __P((Elf *__elf, size_t __offset));
-extern Elf_Data *elf_rawdata __P((Elf_Scn *__scn, Elf_Data *__data));
-extern char *elf_rawfile __P((Elf *__elf, size_t *__ptr));
-extern char *elf_strptr __P((Elf *__elf, size_t __section, size_t __offset));
-extern off_t elf_update __P((Elf *__elf, Elf_Cmd __cmd));
-extern unsigned elf_version __P((unsigned __ver));
-extern Elf_Data *elf32_xlatetof __P((Elf_Data *__dst, const Elf_Data *__src,
+__attribute__ ((visibility ("default"))) extern Elf_Arhdr *elf_getarhdr __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern Elf_Arsym *elf_getarsym __P((Elf *__elf, size_t *__ptr));
+__attribute__ ((visibility ("default"))) extern off_t elf_getbase __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern Elf_Data *elf_getdata __P((Elf_Scn *__scn, Elf_Data *__data));
+__attribute__ ((visibility ("default"))) extern Elf32_Ehdr *elf32_getehdr __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern char *elf_getident __P((Elf *__elf, size_t *__ptr));
+__attribute__ ((visibility ("default"))) extern Elf32_Phdr *elf32_getphdr __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern Elf_Scn *elf_getscn __P((Elf *__elf, size_t __index));
+__attribute__ ((visibility ("default"))) extern Elf32_Shdr *elf32_getshdr __P((Elf_Scn *__scn));
+__attribute__ ((visibility ("default"))) extern unsigned long elf_hash __P((const unsigned char *__name));
+__attribute__ ((visibility ("default"))) extern Elf_Kind elf_kind __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern size_t elf_ndxscn __P((Elf_Scn *__scn));
+__attribute__ ((visibility ("default"))) extern Elf_Data *elf_newdata __P((Elf_Scn *__scn));
+__attribute__ ((visibility ("default"))) extern Elf32_Ehdr *elf32_newehdr __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern Elf32_Phdr *elf32_newphdr __P((Elf *__elf, size_t __count));
+__attribute__ ((visibility ("default"))) extern Elf_Scn *elf_newscn __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern Elf_Cmd elf_next __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern Elf_Scn *elf_nextscn __P((Elf *__elf, Elf_Scn *__scn));
+__attribute__ ((visibility ("default"))) extern size_t elf_rand __P((Elf *__elf, size_t __offset));
+__attribute__ ((visibility ("default"))) extern Elf_Data *elf_rawdata __P((Elf_Scn *__scn, Elf_Data *__data));
+__attribute__ ((visibility ("default"))) extern char *elf_rawfile __P((Elf *__elf, size_t *__ptr));
+__attribute__ ((visibility ("default"))) extern char *elf_strptr __P((Elf *__elf, size_t __section, size_t __offset));
+__attribute__ ((visibility ("default"))) extern off_t elf_update __P((Elf *__elf, Elf_Cmd __cmd));
+__attribute__ ((visibility ("default"))) extern unsigned elf_version __P((unsigned __ver));
+__attribute__ ((visibility ("default"))) extern Elf_Data *elf32_xlatetof __P((Elf_Data *__dst, const Elf_Data *__src,
 	unsigned __encode));
-extern Elf_Data *elf32_xlatetom __P((Elf_Data *__dst, const Elf_Data *__src,
+__attribute__ ((visibility ("default"))) extern Elf_Data *elf32_xlatetom __P((Elf_Data *__dst, const Elf_Data *__src,
 	unsigned __encode));
 
 /*
  * Additional functions found on Solaris
  */
-extern long elf32_checksum __P((Elf *__elf));
+__attribute__ ((visibility ("default"))) extern long elf32_checksum __P((Elf *__elf));
 
 #if __LIBELF64
 /*
@@ -256,15 +256,15 @@ extern long elf64_checksum __P((Elf *__elf));
  * some confusion about the correct values), they are now officially
  * deprecated and should be replaced with the three new functions below.
  */
-DEPRECATED extern int elf_getphnum __P((Elf *__elf, size_t *__resultp));
-DEPRECATED extern int elf_getshnum __P((Elf *__elf, size_t *__resultp));
-DEPRECATED extern int elf_getshstrndx __P((Elf *__elf, size_t *__resultp));
+DEPRECATED __attribute__ ((visibility ("default"))) extern int elf_getphnum __P((Elf *__elf, size_t *__resultp));
+DEPRECATED __attribute__ ((visibility ("default"))) extern int elf_getshnum __P((Elf *__elf, size_t *__resultp));
+DEPRECATED __attribute__ ((visibility ("default"))) extern int elf_getshstrndx __P((Elf *__elf, size_t *__resultp));
 /*
  * Replacement functions (return -1 on failure, 0 on success).
  */
-extern int elf_getphdrnum __P((Elf *__elf, size_t *__resultp));
-extern int elf_getshdrnum __P((Elf *__elf, size_t *__resultp));
-extern int elf_getshdrstrndx __P((Elf *__elf, size_t *__resultp));
+__attribute__ ((visibility ("default"))) extern int elf_getphdrnum __P((Elf *__elf, size_t *__resultp));
+__attribute__ ((visibility ("default"))) extern int elf_getshdrnum __P((Elf *__elf, size_t *__resultp));
+__attribute__ ((visibility ("default"))) extern int elf_getshdrstrndx __P((Elf *__elf, size_t *__resultp));
 
 /*
  * Convenience functions
@@ -274,7 +274,7 @@ extern int elf_getshdrstrndx __P((Elf *__elf, size_t *__resultp));
  * There is no update function for e_shnum or e_phnum
  * because libelf handles them internally.
  */
-extern int elfx_update_shstrndx __P((Elf *__elf, size_t __index));
+__attribute__ ((visibility ("default"))) extern int elfx_update_shstrndx __P((Elf *__elf, size_t __index));
 
 /*
  * Experimental extensions:
@@ -290,13 +290,13 @@ extern int elfx_update_shstrndx __P((Elf *__elf, size_t __index));
  * elfx_remscn() returns the original index of the removed section.
  * A return value of zero indicates an error.
  */
-extern size_t elfx_movscn __P((Elf *__elf, Elf_Scn *__scn, Elf_Scn *__after));
-extern size_t elfx_remscn __P((Elf *__elf, Elf_Scn *__scn));
+__attribute__ ((visibility ("default"))) extern size_t elfx_movscn __P((Elf *__elf, Elf_Scn *__scn, Elf_Scn *__after));
+__attribute__ ((visibility ("default"))) extern size_t elfx_remscn __P((Elf *__elf, Elf_Scn *__scn));
 
 /*
  * elf_delscn() is obsolete.  Please use elfx_remscn() instead.
  */
-extern size_t elf_delscn __P((Elf *__elf, Elf_Scn *__scn));
+__attribute__ ((visibility ("default"))) extern size_t elf_delscn __P((Elf *__elf, Elf_Scn *__scn));
 
 #ifdef __cplusplus
 }

@@ -36,7 +36,7 @@ struct nlist {
 };
 
 #if (__STDC__ + 0) || defined(__cplusplus) || defined(_WIN32)
-extern int nlist(const char *__filename, struct nlist *__nl);
+__attribute__ ((visibility ("default"))) extern int nlist(const char *__filename, struct nlist *__nl);
 #else /* __STDC__ || defined(__cplusplus) */
 extern int nlist();
 #endif /* __STDC__ || defined(__cplusplus) */
